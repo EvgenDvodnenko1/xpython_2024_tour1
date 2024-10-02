@@ -4,6 +4,7 @@ from washing_machine import WashingMachine, cloth_type
 wm = WashingMachine("Samsung", "White")
 
 
+#сам цикл прання
 def laundry_cycle(mode) -> None:
     print(f"\nПочинаю прання в режимі “{cloth_type[mode]["name"]}“")
     print(f"Температура прання: {cloth_type[mode]["temperature"]}")
@@ -17,7 +18,9 @@ def laundry_cycle(mode) -> None:
     return None
 
 
+# головна функція
 def main() -> None:
+    #виводить усі види тканини
     for i, el in enumerate(cloth_type):
         print(f"{i + 1}. {el["name"]}: {el["temperature"]}; {el["spin_power"]}")
     
